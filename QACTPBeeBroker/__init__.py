@@ -5,7 +5,7 @@ from json import dumps
 from datetime import time, datetime, date
 from time import sleep
 
-from ctpbee import ExtAbstract
+from ctpbee import CtpbeeApi
 from ctpbee import CtpBee
 from ctpbee import subscribe
 
@@ -29,7 +29,7 @@ def auth_time(timed):
     return False
 
 
-class DataRecorder(ExtAbstract):
+class DataRecorder(CtpbeeApi):
     def __init__(self, name, app=None):
         super().__init__(name, app)
         self.tick_database_name = "tick"
